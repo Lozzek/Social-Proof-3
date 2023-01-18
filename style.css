@@ -1,0 +1,237 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+
+    font-family: "League Spartan", sans-serif;
+    font-size: 15px;
+    text-align: center;
+
+    background: url(images/bg-pattern-top-mobile.svg) top left no-repeat, url(images/bg-pattern-bottom-desktop.svg) bottom left no-repeat;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  main {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+.title {
+    color: hsl(300, 43%, 22%);
+    line-height: 1.4rem;
+    padding: 3.5rem 2rem 1rem;
+    
+    font-size: 1.8rem;
+}
+
+.top-info {
+    color: hsl(300, 43%, 22%);
+
+    padding: 0px .8rem;
+    font-weight: 400;
+    margin-bottom: 1.6rem;
+}
+
+.review {
+    background-color: hsl(333, 80%, 95%);
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+    padding: .6rem 0;
+}
+
+.review img {
+    display: inline-flex;
+    width: 14px;
+}
+
+.review p {
+    font-weight: 700;
+    font-size: .9rem;
+    color:hsl(300, 43%, 22%);
+}
+
+.bottom-review {
+    margin-bottom: 2.6rem;
+}
+
+.customer {
+    background-color: hsl(300, 43%, 22%);
+    border-radius: .4rem;
+    margin-top: 1rem;
+    color: white;
+}
+
+.avatar {
+    float: left;
+    margin-top: 1.8rem;
+    margin-left: 2.8rem;
+
+    border-radius: 3rem;
+    width: 2rem;
+}
+
+.customer p {
+    margin-right: 6.8rem;
+}
+
+.name {
+    padding-top: 2rem;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: .8rem;
+}
+
+.buyer {
+    font-size: .8rem;
+    font-weight: 500;
+    color: hsl(333, 80%, 67%);
+}
+
+blockquote {
+    text-align: left;
+    font-size: .8rem;
+    font-weight: 400;
+    padding: 1rem 2.9rem;
+}
+
+@media screen and (min-width: 700px) {
+
+    body {
+        background: url(images/bg-pattern-top-desktop.svg) top left no-repeat, url(images/bg-pattern-bottom-desktop.svg) bottom right no-repeat;
+    }
+
+    main {
+        max-width: 1440px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        
+    }
+
+    .top-section {
+        grid-area: 1 / 1;
+        text-align: left;
+        margin-bottom: 5em;
+    }
+
+    .title {
+        font-size: 2.8rem;
+        width: 10em;
+        margin-top: 3rem;
+        line-height: .9;
+    }
+
+    .top-info {
+        font-size: 1rem;
+        padding-left: 2rem;
+        padding-top: 1rem;
+    }
+
+    .three-reviews {
+        grid-area: 1 / 2 / 1 / span 3;
+        
+        margin-left: 12em;
+        margin-top: 6rem;
+    }
+
+    .top-review {
+        margin-right: 6rem;
+    }
+
+    .middle-review {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .bottom-review {
+        margin-left: 6rem;
+    }
+
+    .review {
+        padding: 1rem;
+    }
+
+    .review img {
+        float: left;
+        width: 1rem;
+        margin-left: 1rem;
+    }
+
+    .customer-reviews {
+        display: inline-flex;
+        grid-area: 2 / 1 / span 2 / span 3;
+        column-gap: 2rem;
+
+        height: 15em;
+    }
+
+    .avatar {
+        margin-left: 4.4rem;
+    }
+
+    .name {
+        padding-right: 2rem;
+    }
+
+    .buyer {
+        padding-right: 2rem;
+    }
+
+    blockquote {
+        padding: 1rem 4.3rem;
+    }
+
+    .customer2 {
+        margin-top: 2.5rem;
+        height: 14em;
+    }
+
+    .customer3 {
+        margin-top: 3.5rem;
+        height: 14em;
+    }
+
+}
